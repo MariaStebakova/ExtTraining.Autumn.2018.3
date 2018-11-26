@@ -4,16 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace No3.Solution
+namespace No3.Solution.SecondSolution
 {
-    public static class Methods
+    public class MedianCalculator: ICalculator
     {
-        public static double Mean(List<double> values)
-        {
-            return values.Sum() / values.Count;
-        }
-
-        public static double Median(List<double> values)
+        public double AveragingMethod(List<double> values)
         {
             var sortedValues = values.OrderBy(x => x).ToList();
 
